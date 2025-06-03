@@ -1,4 +1,4 @@
-# K. K. 💫 (@k_k_kaundal) Profile Summary
+# K. K. 💫
 
 ## About
 🚀 **Tech Lead | Full-Stack Developer | AI & Blockchain Enthusiast**
