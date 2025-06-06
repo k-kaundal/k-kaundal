@@ -14,6 +14,10 @@ Hi, I’m KK! 👋 With over 5 years in the tech industry, I lead a dynamic team
 - Specialize in JavaScript, TypeScript, Python, and more.
 
 ---
+## 🤙 Contribution
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=k-kaundal&" alt="k-kaundal" /></p>
+
+---
 
 ## 🌐 Projects
 
