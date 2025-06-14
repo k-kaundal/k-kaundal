@@ -14,13 +14,9 @@ Hi, I’m KK! 👋 With over 5 years in the tech industry, I lead a dynamic team
 - Specialize in JavaScript, TypeScript, Python, and more.
 
 ---
-## 🤙 Contribution
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=k-kaundal&" alt="k-kaundal" /></p>
-
----
 
 ## 🌐 Socials:
-[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@dev.shefali7) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/Shefali__J) 
+[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@kaundal.k.k) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/k_k_kaundal) 
 
 ---
 
