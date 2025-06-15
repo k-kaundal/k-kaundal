@@ -3,7 +3,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaLink, FaRocket, FaWrench } from "react-icons/fa";
 
-const projects = [
+// Define a type for status
+type Status = "live" | "working";
+
+const projects: {
+  title: string;
+  desc: string;
+  link: string;
+  status: Status;
+  tags: string[];
+}[] = [
   {
     title: "pro.kaundal.vip",
     desc: "Personal/professional digital workspace — portfolio, blog, and productivity hub, powered by Next.js, Tailwind and an AI assistant.",
@@ -41,7 +50,7 @@ const projects = [
   },
 ];
 
-const statusIcon = {
+const statusIcon: Record<Status, React.ReactNode> = {
   live: <FaRocket className="inline-block mr-1 text-green-500" title="Live" />,
   working: <FaWrench className="inline-block mr-1 text-yellow-500" title="In Development" />,
 };
