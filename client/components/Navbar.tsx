@@ -15,8 +15,8 @@ const navLinks = [
 ];
 
 const menuVariants = {
-  hidden: { opacity: 0, y: -20, pointerEvents: "none" },
-  visible: { opacity: 1, y: 0, pointerEvents: "auto", transition: { type: "spring", stiffness: 200, damping: 20 } },
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 200, damping: 20 } },
 };
 
 export default function Navbar() {
