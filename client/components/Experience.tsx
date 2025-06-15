@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "AdvantV Solution",
+    company: "Advantev Solutions",
     role: "Tech Lead & Architect",
     period: "2021 - Present",
     desc: "Spearheading architecture and development for AI, Blockchain, and SaaS projects. Leading a cross-functional team to deliver enterprise-grade systems and innovative digital solutions.",
