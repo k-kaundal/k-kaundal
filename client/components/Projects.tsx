@@ -13,6 +13,13 @@ const projects: {
   status: Status;
   tags: string[];
 }[] = [
+    {
+    title: "Tranding News & Tech",
+    desc: "Latest headlines and technology trends from top sources like TechCrunch, Wired, and more. Stay updated with real-time news.",
+    link: "https://news.kaundal.vip",
+    status: "live",
+    tags: ["Next.js", "AI", "Tailwind", "Personal Brand", "RSS"],
+  },
   {
     title: "pro.kaundal.vip",
     desc: "Personal/professional digital workspace — portfolio, blog, and productivity hub, powered by Next.js, Tailwind and an AI assistant.",
@@ -21,11 +28,11 @@ const projects: {
     tags: ["Next.js", "AI", "Tailwind", "Personal Brand"],
   },
   {
-    title: "darkevil.club",
-    desc: "A tech community for hackers, builders, and explorers. Features a forum, resource hub, and collaborative projects. Built for the curious.",
+    title: "Url Shortener & Link Management",
+    desc: "Open-source URL shortener and link management tool. Create, track, and manage links with a user-friendly interface.",
     link: "https://darkevil.club",
     status: "live",
-    tags: ["Community", "Open Source", "Node.js", "Web3"],
+    tags: ["Community", "Open Source", "Node.js", ],
   },
   {
     title: "AI-powered Portfolio Generator",

@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Article", href: "https://solidity.today", target: "_blank", rel: "noopener noreferrer" },
   { label: "Blog", href: "https://kaundal.vip", target: "_blank", rel: "noopener noreferrer" },
+  { label: "Latest News", href: "https://news.kaundal.vip", target: "_blank", rel: "noopener noreferrer" },
   { label: "Contact", href: "#contact" },
 ];
 
