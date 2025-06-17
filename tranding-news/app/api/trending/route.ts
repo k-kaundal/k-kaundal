@@ -29,11 +29,10 @@ const parser = new Parser({
       ["content:encoded", "contentEncoded"],
       ["category", "categories"]
     ]
-    // No channel key here!
   }
 });
 
-// Helper to extract image from description/content (for feeds like Kaundal VIP)
+// Helper to extract image from description/content
 function extractImage(html?: string): string | undefined {
   if (!html) return undefined;
   const match = html.match(/<img [^>]*src=["']([^"']+)["']/i);
@@ -47,18 +46,17 @@ export async function GET() {
     for (const feed of FEEDS) {
       const parsed = await parser.parseURL(feed.url);
 
-      // Channel image (if available)
       const channelImage =
         (parsed as any).image?.url ||
-        extractImage(parsed.description);
+        extractImage((parsed as any).description);
 
       results[feed.name] = parsed.items.slice(0, 10).map(item => {
-        // Prefer content:encoded, then description/contentSnippet for description
+        // Use 'as any' for description field
         const desc: string =
           (item as any).contentEncoded ||
           item.contentSnippet ||
-          item['content:encoded'] ||
-          item.description ||
+          (item as any)['content:encoded'] ||
+          (item as any).description ||
           "";
 
         const categories =
@@ -68,7 +66,6 @@ export async function GET() {
             ? [item.categories]
             : [];
 
-        // Try to extract image from description/content
         const img =
           extractImage(desc) ||
           extractImage(item.contentSnippet) ||
@@ -78,7 +75,7 @@ export async function GET() {
           title: item.title ?? "",
           link: item.link ?? "",
           pubDate: item.pubDate ?? "",
-          channel: (item.creator || (parsed as any).title || feed.name) as string,
+          channel: (item as any).creator || (parsed as any).title || feed.name,
           contentSnippet: desc.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 225) + "...",
           categories,
           image: img
