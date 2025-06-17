@@ -28,10 +28,8 @@ const parser = new Parser({
       ["dc:creator", "creator"],
       ["content:encoded", "contentEncoded"],
       ["category", "categories"]
-    ],
-    channel: [
-      ["image", "image"]
     ]
+    // No channel key here!
   }
 });
 
