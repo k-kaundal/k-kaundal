@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
    <head>
     <meta name="google-site-verification" content="4QvZxunc8BdTDPoVCdMLH0gXxqbcSCsgPFWtnv7Sl4E" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kaundalkkz" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
    </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
