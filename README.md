@@ -64,6 +64,7 @@ Hi, I’m KK! 👋 With over 5 years in the tech industry, I lead a dynamic team
 - **Threads:** @k.k.kaundal
 - **Telegram Bot:** [@dark_evil_club_bot](https://t.me/dark_evil_club_bot)
 - **Gumroad:** [kaundalkk.gumroad.com](https://kaundalkk.gumroad.com)
+- **Mastodon:** <a rel="me" href="https://me.dm/@kaundal_k_k">Mastodon</a>
 
 ---
 
