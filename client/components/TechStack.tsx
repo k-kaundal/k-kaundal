@@ -35,7 +35,9 @@ const stack = [
 
 const TechStack = () => {
   return (
-    <section className="py-16">
+    <section className="py-16"
+    id="tech-stack"
+    >
       <div className="container mx-auto">
       <h3 className="text-3xl font-bold text-center mb-8">My Tech Arsenal</h3>
       <div className="flex flex-wrap justify-center gap-10">
