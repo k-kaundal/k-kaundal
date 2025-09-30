@@ -1609,4 +1609,4 @@ For **2025 and beyond**, the industry is trending toward **TypeScript-first deve
 
 **Document Version**: 1.0
 **Last Updated**: September 2025
-**Author**: Technology Comparison Guide
+**Author**: Kaundal
