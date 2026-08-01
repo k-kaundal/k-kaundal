@@ -52,6 +52,7 @@ Hi, I’m KK! 👋 I build AI-native products — LLM applications, RAG pipeline
 - [forgelearn.dev](https://forgelearn.dev): Hands-on, project-shaped learning platform for developers, with AI guiding each build.
 - [secureenv.in](https://secureenv.in): Secrets & environment-variable security for teams — stop leaking credentials through `.env` files and commits.
 - [roastmyprod.com](https://roastmyprod.com): Unfiltered AI critique of your product or landing page — positioning, copy, UX and conversion gaps.
+- [pro.kaundal.vip](https://pro.kaundal.vip): A growing collection of free developer tools — no signup, no paywall.
 - [kaundal.vip](https://kaundal.vip): My blog — AI engineering, LLM & RAG patterns, Web3, and notes from building in public.
 
 ---

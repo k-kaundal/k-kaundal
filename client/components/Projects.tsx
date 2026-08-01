@@ -39,6 +39,14 @@ const projects: {
     tags: ["AI", "LLM", "Product", "Next.js"],
   },
   {
+    title: "Pro Kaundal",
+    domain: "pro.kaundal.vip",
+    desc: "A growing collection of free developer tools — no signup, no paywall, no credit card. Just open the one you need and use it.",
+    link: "https://pro.kaundal.vip",
+    status: "live",
+    tags: ["Free Tools", "DevTools", "Next.js", "Utilities"],
+  },
+  {
     title: "Kaundal VIP — Blog",
     domain: "kaundal.vip",
     desc: "Where I write it all down: AI engineering, LLM and RAG patterns, Web3, and hard-won notes from building and shipping side projects in public.",

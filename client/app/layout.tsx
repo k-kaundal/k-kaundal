@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "Kamlesh Kumar — AI Engineer & Tech Lead";
 const description =
-  "Kamlesh Kumar builds AI-native products — LLM applications, RAG pipelines and agentic workflows — on top of a decade of web and blockchain engineering. Creator of ForgeLearn, SecureEnv and RoastMyProd.";
+  "Kamlesh Kumar builds AI-native products — LLM applications, RAG pipelines and agentic workflows — on top of a decade of web and blockchain engineering. Creator of ForgeLearn, SecureEnv, RoastMyProd and a suite of free developer tools.";
 
 export const metadata = {
   title,
@@ -28,6 +28,7 @@ export const metadata = {
     "Tailwind CSS",
     "TypeScript",
     "pro.kaundal.vip",
+    "free developer tools",
     "forgelearn.dev",
     "secureenv.in",
     "roastmyprod.com",
