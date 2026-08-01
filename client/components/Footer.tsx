@@ -1,39 +1,6 @@
 "use client";
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaMedium, FaGlobe } from "react-icons/fa";
-
-const socials = [
-  {
-    icon: FaLinkedin,
-    url: "https://www.linkedin.com/in/kaundal",
-    label: "LinkedIn",
-  },
-  {
-    icon: FaGithub,
-    url: "https://github.com/k-kaundal",
-    label: "GitHub",
-  },
-  {
-    icon: FaTwitter,
-    url: "https://x.com/k_k_kaundal",
-    label: "Twitter/X",
-  },
-  {
-    icon: FaMedium,
-    url: "https://solidity.today",
-    label: "Medium",
-  },
-  {
-    icon: FaGlobe,
-    url: "https://pro.kaundal.vip",
-    label: "pro.kaundal.vip",
-  },
-  {
-    icon: FaGlobe,
-    url: "https://darkevil.club",
-    label: "darkevil.club",
-  },
-];
+import { socials, EMAIL } from "@/lib/social";
 
 export default function Footer() {
   return (
@@ -47,14 +14,15 @@ export default function Footer() {
             Crafted with Next.js, TypeScript, Tailwind CSS &amp; ❤️
           </div>
         </div>
-        <div className="flex gap-5 text-2xl mt-4 md:mt-0">
+        <div className="flex flex-wrap justify-center gap-5 text-2xl mt-4 md:mt-0">
           {socials.map(({ icon: Icon, url, label }) => (
             <a
               key={label}
               href={url}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={url.startsWith("mailto:") ? undefined : "_blank"}
+              rel={url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               aria-label={label}
+              title={label}
               className="hover:text-purple-400 transition-colors"
             >
               <Icon />
@@ -63,10 +31,18 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-6 text-center text-xs text-gray-400">
-        Powered by <a href="https://nextjs.org/" className="underline hover:text-purple-200" target="_blank" rel="noopener noreferrer">Next.js</a>
+        Powered by{" "}
+        <a
+          href="https://nextjs.org/"
+          className="underline hover:text-purple-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Next.js
+        </a>
         {" | "}
-        <a href="mailto:kaundal.k.k@gmail.com" className="underline hover:text-purple-200">
-          kaundal.k.k@gmail.com
+        <a href={`mailto:${EMAIL}`} className="underline hover:text-purple-200">
+          {EMAIL}
         </a>
       </div>
     </footer>

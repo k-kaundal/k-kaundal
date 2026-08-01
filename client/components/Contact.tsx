@@ -1,52 +1,7 @@
 "use client";
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaGlobe, FaMedium } from "react-icons/fa";
 import Image from "next/image";
-
-const socials = [
-  {
-    icon: FaLinkedin,
-    url: "https://www.linkedin.com/in/kaundal",
-    label: "LinkedIn",
-    color: "hover:text-blue-700",
-  },
-  {
-    icon: FaGithub,
-    url: "https://github.com/k-kaundal",
-    label: "GitHub",
-    color: "hover:text-gray-900 dark:hover:text-white",
-  },
-  {
-    icon: FaTwitter,
-    url: "https://x.com/k_k_kaundal",
-    label: "Twitter/X",
-    color: "hover:text-blue-500",
-  },
-  {
-    icon: FaEnvelope,
-    url: "mailto:kaundal.kamlesh@gmail.com",
-    label: "Email",
-    color: "hover:text-red-500",
-  },
-  {
-    icon: FaGlobe,
-    url: "https://pro.kaundal.vip",
-    label: "pro.kaundal.vip",
-    color: "hover:text-purple-500",
-  },
-  {
-    icon: FaGlobe,
-    url: "https://darkevil.club",
-    label: "darkevil.club",
-    color: "hover:text-fuchsia-500",
-  },
-  {
-    icon: FaMedium,
-    url: "https://solidity.today",
-    label: "Medium (Solidity.Today)",
-    color: "hover:text-green-700",
-  },
-];
+import { socials, EMAIL } from "@/lib/social";
 
 export default function Contact() {
   return (
@@ -63,12 +18,14 @@ export default function Contact() {
           />
           <div className="font-bold text-xl">Kamlesh Kumar</div>
           <div className="text-purple-600 dark:text-purple-300 font-medium mt-1">
-            Tech Lead · AI & Blockchain Specialist
+            AI Engineer · Tech Lead
           </div>
         </div>
         <div className="w-full text-center mb-8 text-gray-700 dark:text-gray-200 text-lg leading-relaxed">
           <span>
-            Let&apos;s connect! Whether you have a project, want to collaborate, or just want to chat about tech, reach out on any platform below.
+            Let&apos;s connect! Whether you&apos;re building something with LLMs, want to
+            collaborate, or just want to argue about agent design — reach out on any
+            platform below.
           </span>
         </div>
         <div className="flex flex-wrap justify-center gap-5 text-3xl mb-4">
@@ -76,9 +33,10 @@ export default function Contact() {
             <a
               key={label}
               href={url}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={url.startsWith("mailto:") ? undefined : "_blank"}
+              rel={url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               aria-label={label}
+              title={label}
               className={`transition-colors duration-200 ${color} p-3 rounded-full bg-gray-100 dark:bg-gray-800 shadow hover:scale-110`}
             >
               <Icon />
@@ -87,11 +45,8 @@ export default function Contact() {
         </div>
         <div className="mt-6 text-base text-gray-500 dark:text-gray-400">
           Or email me:{" "}
-          <a
-            href="mailto:kaundal.k.k@gmail.com"
-            className="underline hover:text-purple-700"
-          >
-            kaundal.k.k@gmail.com
+          <a href={`mailto:${EMAIL}`} className="underline hover:text-purple-700">
+            {EMAIL}
           </a>
         </div>
       </div>
