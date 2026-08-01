@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaBrain, FaRobot, FaSearch, FaShieldAlt } from "react-icons/fa";
 import type { IconType } from "react-icons";
+import SectionHeading from "./SectionHeading";
 
 const focusAreas: { icon: IconType; title: string; desc: string }[] = [
   {
@@ -29,9 +30,9 @@ const focusAreas: { icon: IconType; title: string; desc: string }[] = [
 
 export default function About() {
   return (
-    <section className="py-16" id="about">
+    <section className="relative py-20" id="about">
       <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center mb-4">Building with AI</h3>
+        <SectionHeading eyebrow="About" title="Building with AI" />
         <p className="max-w-3xl mx-auto text-center text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
           I started in full-stack web, spent years in blockchain and smart contracts, and now
           spend most of my time on AI systems. That path matters: the hard part of an LLM
@@ -44,14 +45,17 @@ export default function About() {
           {focusAreas.map(({ icon: Icon, title, desc }, i) => (
             <motion.div
               key={title}
-              className="p-6 rounded-xl bg-white dark:bg-gray-900 shadow hover:shadow-xl transition"
+              className="card-glow p-7 rounded-2xl glass"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              whileHover={{ y: -6 }}
             >
-              <div className="flex items-center gap-3 mb-3">
-                <Icon className="text-2xl text-purple-500 shrink-0" />
+              <div className="flex items-center gap-4 mb-3">
+                <span className="w-12 h-12 shrink-0 grid place-items-center rounded-xl bg-gradient-to-br from-purple-600 to-blue-500 text-white text-xl">
+                  <Icon />
+                </span>
                 <h4 className="text-xl font-semibold">{title}</h4>
               </div>
               <p className="text-gray-600 dark:text-gray-300">{desc}</p>

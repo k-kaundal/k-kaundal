@@ -38,6 +38,7 @@ import {
 import { TbBrandGolang } from "react-icons/tb";
 import { motion } from "framer-motion";
 import type { IconType } from "react-icons";
+import SectionHeading from "./SectionHeading";
 
 type Group = { heading: string; items: { icon: IconType; name: string }[] };
 
@@ -98,28 +99,32 @@ const groups: Group[] = [
 
 const TechStack = () => {
   return (
-    <section className="py-16" id="tech-stack">
+    <section className="relative py-20" id="tech-stack">
       <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center mb-12">My Tech Arsenal</h3>
-        <div className="space-y-14">
+        <SectionHeading
+          eyebrow="Toolkit"
+          title="My Tech Arsenal"
+          subtitle="What I reach for, grouped by what it actually does."
+        />
+        <div className="space-y-12 max-w-5xl mx-auto">
           {groups.map((group) => (
             <div key={group.heading}>
-              <h4 className="text-xl font-semibold text-center mb-8 text-purple-600 dark:text-purple-300">
+              <h4 className="text-sm font-bold tracking-widest uppercase text-center mb-6 text-purple-600 dark:text-purple-300">
                 {group.heading}
               </h4>
-              <div className="flex flex-wrap justify-center gap-10">
+              <div className="flex flex-wrap justify-center gap-3">
                 {group.items.map(({ icon: Icon, name }, i) => (
                   <motion.div
                     key={name}
-                    className="flex flex-col items-center w-28"
-                    whileHover={{ scale: 1.2, rotate: 6 }}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
+                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl glass hover:border-purple-400/50 transition-colors"
+                    whileHover={{ y: -4, scale: 1.04 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ delay: i * 0.03, duration: 0.3 }}
                   >
-                    <Icon size={44} className="text-purple-500 mb-2" />
-                    <span className="text-sm text-center">{name}</span>
+                    <Icon size={20} className="text-purple-500 shrink-0" />
+                    <span className="text-sm font-medium whitespace-nowrap">{name}</span>
                   </motion.div>
                 ))}
               </div>

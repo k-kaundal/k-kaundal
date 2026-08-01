@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import SectionHeading from "./SectionHeading";
 
 const experiences = [
   {
@@ -28,36 +29,47 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-16" id="experience">
-      <h3 className="text-3xl font-bold text-center mb-8">Experience</h3>
-      <div className="max-w-3xl mx-auto space-y-8">
-        {experiences.map((exp, i) => (
-          <motion.div
-            key={exp.company}
-            className="p-6 rounded-xl bg-white dark:bg-gray-900 shadow"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <div className="flex justify-between items-center mb-2">
-              <span className="font-semibold text-lg">{exp.role}</span>
-              <span className="text-sm text-gray-400">{exp.period}</span>
-            </div>
-            <div className="font-medium text-purple-600">{exp.company}</div>
-            <div className="my-2 text-gray-700 dark:text-gray-200">{exp.desc}</div>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {exp.techs.map((tech) => (
-                <span
-                  key={tech}
-                  className="bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-200 px-2 py-0.5 rounded text-xs"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+    <section className="relative py-20 bg-surface-muted" id="experience">
+      <div className="container mx-auto px-4">
+        <SectionHeading eyebrow="Journey" title="Experience" />
+        {/* Vertical rail with a node per role. */}
+        <div className="relative max-w-3xl mx-auto pl-8 md:pl-12">
+          <div className="absolute left-[7px] md:left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-purple-500 via-fuchsia-500 to-transparent" />
+          <div className="space-y-8">
+            {experiences.map((exp, i) => (
+              <motion.div
+                key={exp.company}
+                className="card-glow relative p-6 rounded-2xl glass"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <span className="absolute -left-8 md:-left-12 top-8 w-4 h-4 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 ring-4 ring-[var(--surface-muted)]" />
+                <div className="flex flex-wrap justify-between items-center gap-2 mb-1">
+                  <span className="font-bold text-lg">{exp.role}</span>
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-200">
+                    {exp.period}
+                  </span>
+                </div>
+                <div className="font-medium text-purple-600 dark:text-purple-300">
+                  {exp.company}
+                </div>
+                <div className="my-3 text-gray-700 dark:text-gray-200">{exp.desc}</div>
+                <div className="flex flex-wrap gap-2">
+                  {exp.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-purple-500/10 dark:bg-purple-400/15 text-purple-700 dark:text-purple-200 px-2.5 py-1 rounded-full text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

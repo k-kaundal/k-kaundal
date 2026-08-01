@@ -51,8 +51,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@k_k_kaundal",
-    creator: "@k_k_kaundal",
+    site: "@kkworld",
+    creator: "@kkworld",
     title,
     description,
     images: ["https://pro.kaundal.vip/kaundal.jpg"],
@@ -79,9 +79,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
    <head>
     <meta name="google-site-verification" content="4QvZxunc8BdTDPoVCdMLH0gXxqbcSCsgPFWtnv7Sl4E" />
+    {/*
+      Applies the saved theme before first paint. Without this the page
+      renders light, then flips on hydration.
+    */}
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}document.documentElement.style.colorScheme=t;}catch(e){}})();`,
+      }}
+    />
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kaundalkkz" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
    </head>
       <body
