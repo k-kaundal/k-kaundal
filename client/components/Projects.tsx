@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLink, FaRocket, FaWrench } from "react-icons/fa";
+import { FaArrowRight, FaRocket, FaWrench } from "react-icons/fa";
+import SectionHeading from "./SectionHeading";
 
 // Define a type for status
 type Status = "live" | "working";
@@ -63,55 +64,56 @@ const statusIcon: Record<Status, React.ReactNode> = {
 
 export default function Projects() {
   return (
-    <section
-      className="py-16 bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-900 dark:to-purple-900"
-      id="projects"
-    >
-      <h3 className="text-3xl font-bold text-center mb-2">Things I&apos;ve Built</h3>
-      <p className="text-center text-gray-600 dark:text-gray-300 mb-10">
-        Products I design, build and run myself — all live in production.
-      </p>
-      <div className="flex flex-wrap justify-center gap-10 px-4">
-        {projects.map((p, i) => (
-          <motion.a
-            key={p.title}
-            href={p.link}
-            target={p.link.startsWith("http") ? "_blank" : undefined}
-            rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined}
-            className={`w-80 p-6 rounded-xl shadow-md cursor-pointer hover:shadow-2xl transition bg-white dark:bg-gray-800 border-2 ${
-              p.status === "working" ? "border-yellow-400" : "border-green-400"
-            }`}
-            whileHover={{ scale: 1.05, y: -10 }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 + i * 0.1 }}
-          >
-            <div className="flex items-center mb-1">
-              <span className="mr-2">{statusIcon[p.status]}</span>
-              <h4 className="text-xl font-semibold">{p.title}</h4>
-              {p.link.startsWith("http") && <FaLink className="ml-2 text-purple-400" />}
-            </div>
-            <div className="text-sm text-purple-500 dark:text-purple-300 mb-3">{p.domain}</div>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">{p.desc}</p>
-            <div className="flex flex-wrap gap-2">
-              {p.tags &&
-                p.tags.map((tag) => (
+    <section className="relative py-20 bg-surface-muted" id="projects">
+      <div className="container mx-auto px-4">
+        <SectionHeading
+          eyebrow="Work"
+          title="Things I've Built"
+          subtitle="Products I design, build and run myself — all live in production."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {projects.map((p, i) => (
+            <motion.a
+              key={p.title}
+              href={p.link}
+              target={p.link.startsWith("http") ? "_blank" : undefined}
+              rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="card-glow group flex flex-col p-6 rounded-2xl glass cursor-pointer"
+              whileHover={{ y: -8 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ delay: 0.05 + i * 0.08, duration: 0.5 }}
+            >
+              <div className="flex items-start justify-between gap-3 mb-1">
+                <div className="flex items-center gap-2">
+                  {statusIcon[p.status]}
+                  <h4 className="text-xl font-bold">{p.title}</h4>
+                </div>
+                <FaArrowRight className="text-purple-400 shrink-0 mt-1.5 -rotate-45 group-hover:rotate-0 transition-transform" />
+              </div>
+              <div className="text-sm font-medium text-purple-600 dark:text-purple-300 mb-3">
+                {p.domain}
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 mb-5 flex-1">{p.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {p.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-purple-100 dark:bg-purple-700 text-purple-700 dark:text-purple-100 px-2 py-0.5 rounded text-xs"
+                    className="bg-purple-500/10 dark:bg-purple-400/15 text-purple-700 dark:text-purple-200 px-2.5 py-1 rounded-full text-xs font-medium"
                   >
                     {tag}
                   </span>
                 ))}
-            </div>
-            {p.status === "working" && (
-              <div className="mt-4 text-xs text-yellow-600 dark:text-yellow-300 font-semibold">
-                🚧 In Development
               </div>
-            )}
-          </motion.a>
-        ))}
+              {p.status === "working" && (
+                <div className="mt-4 text-xs text-yellow-600 dark:text-yellow-300 font-semibold">
+                  🚧 In Development
+                </div>
+              )}
+            </motion.a>
+          ))}
+        </div>
       </div>
     </section>
   );

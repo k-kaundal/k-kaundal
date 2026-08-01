@@ -2,19 +2,22 @@
 import React from "react";
 import Image from "next/image";
 import { socials, EMAIL } from "@/lib/social";
+import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   return (
-    <section className="py-16" id="contact">
-      <h3 className="text-3xl font-bold text-center mb-8">Contact & Social</h3>
-      <div className="max-w-2xl mx-auto bg-white/80 dark:bg-gray-900/70 rounded-3xl shadow-lg px-8 py-10 flex flex-col items-center">
+    <section className="relative py-20 overflow-hidden" id="contact">
+      <div className="aurora" />
+      <div className="container mx-auto px-4 relative z-10">
+      <SectionHeading eyebrow="Say hello" title="Contact & Social" />
+      <div className="max-w-2xl mx-auto card-glow glass rounded-3xl px-8 py-10 flex flex-col items-center">
         <div className="mb-8 flex flex-col items-center">
           <Image
             src="/kaundal.jpg"
             alt="Kamlesh Kumar"
             width={110}
             height={110}
-            className="rounded-full border-4 border-purple-300 shadow-lg mb-4"
+            className="rounded-full border-4 border-purple-400/60 shadow-lg mb-4"
           />
           <div className="font-bold text-xl">Kamlesh Kumar</div>
           <div className="text-purple-600 dark:text-purple-300 font-medium mt-1">
@@ -37,7 +40,7 @@ export default function Contact() {
               rel={url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               aria-label={label}
               title={label}
-              className={`transition-colors duration-200 ${color} p-3 rounded-full bg-gray-100 dark:bg-gray-800 shadow hover:scale-110`}
+              className={`transition-all duration-200 ${color} p-3 rounded-full glass shadow hover:scale-110 hover:-translate-y-1`}
             >
               <Icon />
             </a>
@@ -45,10 +48,11 @@ export default function Contact() {
         </div>
         <div className="mt-6 text-base text-gray-500 dark:text-gray-400">
           Or email me:{" "}
-          <a href={`mailto:${EMAIL}`} className="underline hover:text-purple-700">
+          <a href={`mailto:${EMAIL}`} className="underline hover:text-purple-600">
             {EMAIL}
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

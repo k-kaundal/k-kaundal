@@ -8,6 +8,7 @@ import {
   FaDiscord,
   FaSlack,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 
 /**
@@ -19,6 +20,11 @@ import type { IconType } from "react-icons";
  */
 export const DISCORD_URL = "";
 export const SLACK_URL = "";
+
+/** Original X account — kept alongside the newer one. */
+export const X_HANDLE = "k_k_kaundal";
+/** X account whose articles/threads are embedded on the site. */
+export const X_ARTICLES_HANDLE = "kkworld";
 
 export type Social = {
   icon: IconType;
@@ -41,9 +47,15 @@ const allSocials: Social[] = [
     color: "hover:text-gray-900 dark:hover:text-white",
   },
   {
+    icon: FaXTwitter,
+    url: `https://x.com/${X_ARTICLES_HANDLE}`,
+    label: `X — @${X_ARTICLES_HANDLE}`,
+    color: "hover:text-black dark:hover:text-white",
+  },
+  {
     icon: FaTwitter,
-    url: "https://x.com/k_k_kaundal",
-    label: "Twitter/X",
+    url: `https://x.com/${X_HANDLE}`,
+    label: `X — @${X_HANDLE}`,
     color: "hover:text-blue-500",
   },
   {
