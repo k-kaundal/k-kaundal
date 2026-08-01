@@ -76,7 +76,7 @@ const AnimatedHero = () => {
               AI Engineer · Tech Lead · Builder of LLM Products
             </motion.h2>
 
-            <motion.p variants={item} className="mt-6 text-lg md:text-xl max-w-xl">
+            <motion.p variants={item} className="prose-lead mt-6">
               I design and ship <b>AI-native products</b> — retrieval pipelines, agentic
               workflows and LLM-backed tooling that hold up under real traffic. Ten years of
               web and blockchain engineering underneath, so the models land in systems that

@@ -10,11 +10,12 @@ type NavLink = { label: string; href: string; target?: string; rel?: string };
 const navLinks: NavLink[] = [
   { label: "Home", href: "#top" },
   { label: "AI", href: "#about" },
-  { label: "Tech Stack", href: "#tech-stack" },
+  { label: "Research", href: "#research" },
+  { label: "Learning", href: "#learning" },
+  { label: "Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
   { label: "Writing", href: "#writing" },
   { label: "Experience", href: "#experience" },
-  { label: "Blog", href: "https://kaundal.vip", target: "_blank", rel: "noopener noreferrer" },
   { label: "Contact", href: "#contact" },
 ];
 

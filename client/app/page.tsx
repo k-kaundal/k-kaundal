@@ -1,5 +1,7 @@
 import AnimatedHero from '@/components/AnimatedHero';
 import About from '@/components/About';
+import Research from '@/components/Research';
+import Learning from '@/components/Learning';
 import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
 import XArticles from '@/components/XArticles';
@@ -16,6 +18,8 @@ export default function Home() {
       <Navbar />
       <AnimatedHero />
       <About />
+      <Research />
+      <Learning />
       <TechStack />
       <Projects />
       <XArticles />

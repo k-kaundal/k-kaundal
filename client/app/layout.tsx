@@ -51,8 +51,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@k_k_kaundal",
-    creator: "@k_k_kaundal",
+    site: "@kkworld",
+    creator: "@kkworld",
     title,
     description,
     images: ["https://pro.kaundal.vip/kaundal.jpg"],

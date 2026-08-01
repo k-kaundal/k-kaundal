@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import SectionHeading from "./SectionHeading";
 import { useTheme } from "./ThemeToggle";
-import { X_ARTICLES_HANDLE, X_HANDLE } from "@/lib/social";
+import { X_ARTICLES_HANDLE } from "@/lib/social";
 
 const WIDGET_SRC = "https://platform.twitter.com/widgets.js";
 
@@ -154,17 +154,6 @@ export default function XArticles() {
             </div>
           </motion.div>
 
-          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
-            Also posting as{" "}
-            <a
-              href={`https://x.com/${X_HANDLE}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-600 dark:text-purple-300 hover:underline font-medium"
-            >
-              @{X_HANDLE}
-            </a>
-          </p>
         </div>
       </div>
     </section>

@@ -34,6 +34,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  /* clip, not hidden: no scroll container, so position:sticky still works */
+  overflow-x: clip;
 }
 
 body {
@@ -162,6 +164,29 @@ body {
   to {
     background-position: 200% center;
   }
+}
+
+/* ---- Reading -------------------------------------------------------- */
+
+/* Caps line length near 70 characters — past that the eye loses the line. */
+.prose-measure {
+  max-width: 68ch;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.prose-lead {
+  max-width: 62ch;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
 }
 
 /* ---- Scrollbar ------------------------------------------------------ */
