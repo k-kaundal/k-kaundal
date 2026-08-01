@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    company: "Independent Products",
+    role: "Founder & AI Engineer",
+    period: "2024 - Present",
+    desc: "Designing, building and running AI-native products end to end — ForgeLearn, SecureEnv and RoastMyProd. LLM orchestration, retrieval pipelines, evals and cost control, plus everything around them: auth, billing, infra and support.",
+    techs: ["LLM Apps", "RAG", "Agents", "Next.js", "TypeScript", "Python", "Product"],
+  },
+  {
     company: "Advantev Solutions",
     role: "Tech Lead & Architect",
     period: "2021 - Present",

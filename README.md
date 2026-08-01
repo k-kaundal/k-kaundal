@@ -1,17 +1,18 @@
 # K. K. 💫
 
 ## About
-🚀 **Tech Lead | Full-Stack Developer | AI & Blockchain Enthusiast**
+🤖 **AI Engineer | Tech Lead | Builder of LLM Products**
 
-Hi, I’m KK! 👋 With over 5 years in the tech industry, I lead a dynamic team of developers, crafting innovative solutions using Next.js, ReactJS, Blockchain, and AI. My journey has been fueled by a passion for solving complex problems and mentoring the next generation of developers.
+Hi, I’m KK! 👋 I build AI-native products — LLM applications, RAG pipelines and agentic workflows — on top of 5+ years of full-stack and blockchain engineering. I lead a team of developers by day and ship my own products in public the rest of the time.
 
 ---
 
 ## 💡 What I Do
 
-- Lead a team of 10+ developers, delivering cutting-edge applications.
-- Architect systems that enhance reliability and scalability.
-- Specialize in JavaScript, TypeScript, Python, and more.
+- **LLM application engineering** — Claude & OpenAI APIs, prompt architecture, structured output, evals, cost and latency budgets.
+- **RAG & retrieval systems** — chunking, embeddings, vector stores and hybrid search that returns the right passage.
+- **Agents & automation** — tool-calling agents, MCP servers, human-in-the-loop checkpoints and guardrails.
+- **Ship the whole thing** — architecture, infra and UI, not just the model call.
 
 ---
 
@@ -48,10 +49,10 @@ Hi, I’m KK! 👋 With over 5 years in the tech industry, I lead a dynamic team
 
 ## 🌐 Projects
 
-- [darkevil.club](https://darkevil.club): A free URL shortener & QR generator.
-- [kaundal.vip](https://kaundal.vip): A hub for tech & crypto news.
-- [pro.kaundal.vip](https://pro.kaundal.vip): Upcoming platform for developer tools & tips.
-- [garima.kaundal.vip](https://garima.kaundal.vip): For My One & Only 💖.
+- [forgelearn.dev](https://forgelearn.dev): Hands-on, project-shaped learning platform for developers, with AI guiding each build.
+- [secureenv.in](https://secureenv.in): Secrets & environment-variable security for teams — stop leaking credentials through `.env` files and commits.
+- [roastmyprod.com](https://roastmyprod.com): Unfiltered AI critique of your product or landing page — positioning, copy, UX and conversion gaps.
+- [kaundal.vip](https://kaundal.vip): My blog — AI engineering, LLM & RAG patterns, Web3, and notes from building in public.
 
 ---
 

@@ -2,17 +2,23 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const title = "Kamlesh Kumar — AI Engineer & Tech Lead";
+const description =
+  "Kamlesh Kumar builds AI-native products — LLM applications, RAG pipelines and agentic workflows — on top of a decade of web and blockchain engineering. Creator of ForgeLearn, SecureEnv and RoastMyProd.";
+
 export const metadata = {
-  title: "Kamlesh Kumar — Tech Lead, AI & Blockchain Specialist",
-  description:
-    "Kamlesh Kumar is a software developer, tech lead, and open source advocate specializing in AI, Blockchain, and Web3. Explore his projects, experience, and connect for collaboration.",
+  title,
+  description,
   authors: [{ name: "Kamlesh Kumar", url: "https://pro.kaundal.vip" }],
   creator: "Kamlesh Kumar",
   keywords: [
     "Kamlesh Kumar",
     "k-kaundal",
+    "AI Engineer",
+    "LLM Developer",
+    "RAG",
+    "AI Agents",
     "Tech Lead",
-    "AI Developer",
     "Blockchain Expert",
     "Web3",
     "Software Engineer",
@@ -22,13 +28,14 @@ export const metadata = {
     "Tailwind CSS",
     "TypeScript",
     "pro.kaundal.vip",
-    "darkevil.club",
-    "solidity.today",
+    "forgelearn.dev",
+    "secureenv.in",
+    "roastmyprod.com",
+    "kaundal.vip",
   ],
   openGraph: {
-    title: "Kamlesh Kumar — Tech Lead, AI & Blockchain Specialist",
-    description:
-      "Software developer, tech lead, open source advocate. Explore projects, experience, and connect with Kamlesh Kumar.",
+    title,
+    description,
     url: "https://pro.kaundal.vip",
     siteName: "Kamlesh Kumar Portfolio",
     images: [
@@ -36,7 +43,7 @@ export const metadata = {
         url: "https://pro.kaundal.vip/kaundal.jpg",
         width: 1200,
         height: 630,
-        alt: "Kamlesh Kumar — Tech Lead, AI & Blockchain Specialist",
+        alt: title,
       },
     ],
     type: "website",
@@ -45,9 +52,8 @@ export const metadata = {
     card: "summary_large_image",
     site: "@k_k_kaundal",
     creator: "@k_k_kaundal",
-    title: "Kamlesh Kumar — Tech Lead, AI & Blockchain Specialist",
-    description:
-      "Software developer, tech lead, open source advocate. Explore projects, experience, and connect with Kamlesh Kumar.",
+    title,
+    description,
     images: ["https://pro.kaundal.vip/kaundal.jpg"],
   },
   icons: {

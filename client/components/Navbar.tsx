@@ -4,14 +4,15 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
+type NavLink = { label: string; href: string; target?: string; rel?: string };
+
+const navLinks: NavLink[] = [
   { label: "Home", href: "#" },
-  { label: "Experience", href: "#experience" },
+  { label: "AI", href: "#about" },
   { label: "Tech Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
-  { label: "Article", href: "https://solidity.today", target: "_blank", rel: "noopener noreferrer" },
+  { label: "Experience", href: "#experience" },
   { label: "Blog", href: "https://kaundal.vip", target: "_blank", rel: "noopener noreferrer" },
-  { label: "Latest News", href: "https://news.kaundal.vip", target: "_blank", rel: "noopener noreferrer" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -52,6 +53,8 @@ export default function Navbar() {
             >
               <a
                 href={link.href}
+                target={link.target}
+                rel={link.rel}
                 className="hover:text-purple-600 dark:hover:text-purple-400 hover:underline underline-offset-4 transition font-semibold px-2 py-1"
               >
                 {link.label}
@@ -79,6 +82,8 @@ export default function Navbar() {
               >
                 <a
                   href={link.href}
+                  target={link.target}
+                  rel={link.rel}
                   className="block py-2 text-lg font-semibold hover:text-purple-700 transition"
                   onClick={() => setOpen(false)}
                 >
